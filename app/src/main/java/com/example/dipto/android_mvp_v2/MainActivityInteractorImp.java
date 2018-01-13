@@ -26,15 +26,17 @@ public class MainActivityInteractorImp implements MainActivityInteractor{
             public void onResponse(Call<IPResponse> call, Response<IPResponse> response) {
                 if(response.isSuccessful()){
                     Log.d("+++onResponse+++", "yes") ;
+                    onRequestListener.onSuccess(response.body());
                 }
                 else{
 
+                    onRequestListener.onFailure("Server Problem !!");
                 }
             }
 
             @Override
             public void onFailure(Call<IPResponse> call, Throwable t) {
-
+                onRequestListener.onFailure("");
             }
         });
     }
