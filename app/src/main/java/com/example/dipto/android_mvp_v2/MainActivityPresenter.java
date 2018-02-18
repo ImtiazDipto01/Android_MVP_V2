@@ -9,5 +9,6 @@ public interface MainActivityPresenter {
     public void callGetIpResponse();
 
     public void onDestroy();
+
     //
 }
