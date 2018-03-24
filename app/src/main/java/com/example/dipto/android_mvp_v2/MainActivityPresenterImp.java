@@ -6,6 +6,12 @@ package com.example.dipto.android_mvp_v2;
 
 public class MainActivityPresenterImp implements MainActivityPresenter, MainActivityInteractor.OnRequestListener{
 
+    /*
+    * MainActivityView implemented in MainActivity
+    * MainActivityInteractor implemented in MainActivityInteractorImp
+    * Implemented places objects initiating in interfaces to call those methods
+    * */
+
     private MainActivityView view ;
     private MainActivityInteractor interactor ;
 
